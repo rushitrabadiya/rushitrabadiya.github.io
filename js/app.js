@@ -368,6 +368,11 @@
   /* ─── TESTIMONIALS ────────────────────────────────────────── */
   function renderTestimonials() {
     const testimonials = D.testimonials || [];
+    const section = $('#testimonials');
+    if (testimonials.length === 0) {
+      if (section) section.style.display = 'none';
+      return;
+    }
     const track = $('#testimonials-track');
     track.innerHTML = '';
     testimonials.forEach(t => {

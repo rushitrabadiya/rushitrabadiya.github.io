@@ -1,5 +1,7 @@
 // ============================================================
 //  PORTFOLIO DATA — Edit this file to update your portfolio
+//  Reviewed & corrected against verified resume/project data.
+//  See inline comments (⚠️) for items that still need YOUR input.
 // ============================================================
 window.portfolioData = {
 
@@ -8,7 +10,7 @@ window.portfolioData = {
     siteTitle: "Rushit Rabadiya — Backend Developer",
     siteDescription:
       "Backend Developer with 2.5+ years of experience building scalable web applications using Node.js, Express.js, and TypeScript.",
-    // REPLACE: Add your resume PDF URL here
+    // ⚠️ REPLACE: Add your resume PDF/DOCX URL here once hosted (e.g. after uploading via your admin panel's Resume & Documents section)
     resumeUrl: ""
   },
 
@@ -17,6 +19,7 @@ window.portfolioData = {
     name: "Rushit Rabadiya",
     title: "Backend Developer",
     bio: "Backend Developer with 2.5 years of experience building scalable web applications using Node.js, Express.js, and TypeScript. Strong in RESTful API design, hybrid database architecture (PostgreSQL, MongoDB, Redis), and containerized deployment (Docker, AWS EC2/S3, CI/CD). Experienced leading backend architecture and owning end-to-end delivery, with hands-on exposure to applied AI (RAG pipelines, multi-provider LLM orchestration, local model deployment).",
+    // ⚠️ REPLACE: This is a random stock photo placeholder, not you — swap for your real photo
     avatar: "https://randomuser.me/api/portraits/men/75.jpg",
     status: "Available for new opportunities",
     phone: "+91 77779 53418",
@@ -48,7 +51,7 @@ window.portfolioData = {
   socialLinks: {
     github: "https://github.com/rushitrabadiya",
     linkedin: "https://www.linkedin.com/in/rushit-rabadiya",
-    twitter: "", // REPLACE: Add your Twitter URL if you have one
+    twitter: "", // Leave blank unless you have one
     email: "rushitrabadiya.work@gmail.com"
   },
 
@@ -239,50 +242,44 @@ window.portfolioData = {
   ],
 
   // ── Certifications ──────────────────────────────────────────
+  // Fixed: matches your actual resume exactly. The MongoDB Atlas course
+  // and the Intro to MongoDB course are two SEPARATE certificates, not one.
+  // ⚠️ Dates removed — the previous file had invented dates (Mar/Feb/Jan 2023)
+  // that don't appear anywhere in your source data. Add real dates if you have them.
   certifications: [
-    {
-      name: "MongoDB Atlas Course",
-      issuingOrganization: "MongoDB",
-      issueDate: "Mar 2023",
-      credentialUrl: "https://learn.mongodb.com/"
-    },
-    {
-      name: "JavaScript Algorithms & Data Structures",
-      issuingOrganization: "FreeCodeCamp",
-      issueDate: "Feb 2023",
-      credentialUrl: "https://www.freecodecamp.org/"
-    },
     {
       name: "Node.js, Express, MongoDB Bootcamp",
       issuingOrganization: "Udemy",
-      issueDate: "Jan 2023",
+      issueDate: "", // ⚠️ add real date if known
       credentialUrl: "https://www.udemy.com/"
+    },
+    {
+      name: "JavaScript Algorithms and Data Structures",
+      issuingOrganization: "freeCodeCamp",
+      issueDate: "", // ⚠️ add real date if known
+      credentialUrl: "https://www.freecodecamp.org/"
+    },
+    {
+      name: "Introduction to MongoDB",
+      issuingOrganization: "MongoDB (Official Course)",
+      issueDate: "", // ⚠️ add real date if known
+      credentialUrl: "https://learn.mongodb.com/"
+    },
+    {
+      name: "Getting Started with MongoDB Atlas",
+      issuingOrganization: "MongoDB (Official Course)",
+      issueDate: "", // ⚠️ add real date if known
+      credentialUrl: "https://learn.mongodb.com/"
     }
   ],
 
   // ── Testimonials ────────────────────────────────────────────
-  // DUMMY DATA — Replace with real testimonials from colleagues/clients
-  testimonials: [
-    {
-      name: "Priya Sharma",
-      role: "Product Manager",
-      company: "Edzyme Tech",
-      text: "Rushit's ability to design and deliver complex backend systems is exceptional. He led our engineering team with confidence and built a platform that handles thousands of concurrent users seamlessly.",
-      avatar: "https://randomuser.me/api/portraits/women/44.jpg"
-    },
-    {
-      name: "Arjun Mehta",
-      role: "Frontend Lead",
-      company: "Stackdot",
-      text: "Working with Rushit was a pleasure. His API design is always clean, well-documented, and exactly what the frontend needs. His commitment to code quality sets a high standard for the team.",
-      avatar: "https://randomuser.me/api/portraits/men/32.jpg"
-    },
-    {
-      name: "Sneha Patel",
-      role: "CTO",
-      company: "Tech Startup",
-      text: "Rushit architected our entire backend from scratch and it scaled beautifully. His grasp of async systems, database design, and DevOps is rare to find in a developer of his experience level.",
-      avatar: "https://randomuser.me/api/portraits/women/68.jpg"
-    }
-  ]
+  // ⚠️ REMOVED — the previous file had fully fabricated names, quotes,
+  // and stock photos attributed to your real employers (Edzyme Tech,
+  // Stackdot). Publishing invented testimonials under real company names
+  // is misleading to visitors and risky if a real colleague ever sees it.
+  // Replace this empty array with REAL quotes from real colleagues/managers
+  // once you have them (with their permission), or hide the section on
+  // the site until then.
+  testimonials: []
 };
