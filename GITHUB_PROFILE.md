@@ -48,11 +48,11 @@
 
 ```yaml
 # rushit.yaml
-name     : Rushit Rabadiya
-location : Ahmedabad, Gujarat, India
-company  : Edzyme Tech Pvt Ltd
-role     : Senior Software Developer
-exp      : 2.5+ years
+name: Rushit Rabadiya
+location: Ahmedabad, Gujarat, India
+company: Edzyme Tech Pvt Ltd
+role: Senior Software Developer
+exp: 2.5+ years
 
 skills:
   - Node.js + TypeScript     (Backend Lead)
@@ -61,10 +61,10 @@ skills:
   - Docker + AWS + CI/CD     (DevOps)
   - RAG + LLM Orchestration  (AI/ML)
 
-led      : Team of 6 Engineers
-api_sla  : < 100ms at peak load
-status   : Available for new opportunities
-email    : rushitrabadiya.work@gmail.com
+led: Team of 6 Engineers
+api_sla: < 100ms at peak load
+status: Available for new opportunities
+email: rushitrabadiya.work@gmail.com
 ```
 
 <br clear="right"/>
@@ -174,7 +174,7 @@ email    : rushitrabadiya.work@gmail.com
 ## GitHub Analytics
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=rushitrabadiya&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=7C3AED&icon_color=A855F7&text_color=ffffff&border_radius=12&count_private=true&include_all_commits=true" height="195" alt="GitHub Stats"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=rushitrabadiya&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=7C3AED&icon_color=A855F7&text_color=ffffff&border_radius=12" height="195" alt="GitHub Stats"/>
   &nbsp;
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rushitrabadiya&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=7C3AED&text_color=ffffff&layout=compact&border_radius=12&langs_count=8" height="195" alt="Top Languages"/>
 </p>
@@ -188,7 +188,11 @@ email    : rushitrabadiya.work@gmail.com
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=rushitrabadiya&theme=tokyonight&no-frame=true&no-bg=true&column=7&rank=SECRET,SSS,SS,S,AAA,AA,A,B,C" width="96%" alt="GitHub Trophies"/>
+  <img src="https://github-profile-trophy.vercel.app/?username=rushitrabadiya&theme=tokyonight&no-frame=true&no-bg=true&column=6" width="96%" alt="GitHub Trophies"/>
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=rushitrabadiya&theme=tokyonight" width="96%" alt="Profile Summary"/>
 </p>
 
 <br/>
@@ -203,18 +207,18 @@ email    : rushitrabadiya.work@gmail.com
 
 <br/>
 
-| Project | Description | Tech | Links |
-|---------|-------------|------|-------|
-| **Kipi** — Enterprise SaaS/ERP | ERP backend for educational institutes. Hybrid PostgreSQL+MongoDB, async queues, real-time, <100ms API latency. Led 6 engineers. | `Node.js` `TS` `PostgreSQL` `MongoDB` `Redis` `BullMQ` `Docker` `AWS` | [Live](https://kipiapp.in) |
-| **NexusChat** — AI RAG Platform | Multi-tenant RAG document chat. Multi-provider LLM failover (Gemini, Groq, Ollama), pgvector, async doc processing. | `Node.js` `TS` `Prisma` `PostgreSQL` `Redis` `React` `Ollama` | [GitHub](https://github.com/rushitrabadiya/NexusChat) |
-| **Archrendr** — Digital E-Commerce | Cloud-native marketplace for 3D models/plugins. Stripe subscriptions + S3 pre-signed URL delivery. | `Node.js` `TS` `PostgreSQL` `Sequelize` `Docker` `AWS S3` `Stripe` | — |
-| **LAMS** — Live Auction System | High-concurrency IPL-style auction. Real-time Socket.io bidding, Redis race-condition prevention. | `Next.js` `Node.js` `PostgreSQL` `Redis` `BullMQ` `Socket.io` | — |
-| **Smart Society Management** | Digitize society ops — billing, guests, complaints. Factory-pattern multi-provider file storage. | `Node.js` `TS` `MongoDB` `Socket.io` `JWT` `Docker` | — |
-| **Mahavir** (Go-Celox Trading) | B2B marketing site for chemical trading company. Next.js 15, SEO + AEO optimized. | `Next.js` `React` `TypeScript` | [GitHub](https://github.com/rushitrabadiya/Go-Celox-trading) · [Live](https://www.mahavirco.com) |
-| **Remindify** — Reminder PWA | Recurring reminders, offline IndexedDB, async BullMQ push notifications. | `React` `Node.js` `MongoDB` `Redis` `BullMQ` `Docker` | — |
-| **Minimal Gemini Chat** | SSE-streamed AI chat. Dynamic Flash/Pro model switching, multilingual support. | `React` `Node.js` `TS` `Prisma` `PostgreSQL` | — |
-| **Satyanarayan POS** | Multi-store retail POS. Inventory, RBAC staff, order processing, receipt gen. | `Node.js` `TS` `MongoDB` `Mongoose` `Socket.io` `JWT` | — |
-| **GMS** — Get My Sport | Real-time sports venue booking. Prevents double-bookings for owners + clients. | `Node.js` `React` `MongoDB` `PostgreSQL` | — |
+| Project                            | Description                                                                                                                      | Tech                                                                  | Links                                                                                            |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **Kipi** — Enterprise SaaS/ERP     | ERP backend for educational institutes. Hybrid PostgreSQL+MongoDB, async queues, real-time, <100ms API latency. Led 6 engineers. | `Node.js` `TS` `PostgreSQL` `MongoDB` `Redis` `BullMQ` `Docker` `AWS` | [Live](https://kipiapp.in)                                                                       |
+| **NexusChat** — AI RAG Platform    | Multi-tenant RAG document chat. Multi-provider LLM failover (Gemini, Groq, Ollama), pgvector, async doc processing.              | `Node.js` `TS` `Prisma` `PostgreSQL` `Redis` `React` `Ollama`         | [GitHub](https://github.com/rushitrabadiya/NexusChat)                                            |
+| **Archrendr** — Digital E-Commerce | Cloud-native marketplace for 3D models/plugins. Stripe subscriptions + S3 pre-signed URL delivery.                               | `Node.js` `TS` `PostgreSQL` `Sequelize` `Docker` `AWS S3` `Stripe`    | —                                                                                                |
+| **LAMS** — Live Auction System     | High-concurrency IPL-style auction. Real-time Socket.io bidding, Redis race-condition prevention.                                | `Next.js` `Node.js` `PostgreSQL` `Redis` `BullMQ` `Socket.io`         | —                                                                                                |
+| **Smart Society Management**       | Digitize society ops — billing, guests, complaints. Factory-pattern multi-provider file storage.                                 | `Node.js` `TS` `MongoDB` `Socket.io` `JWT` `Docker`                   | —                                                                                                |
+| **Mahavir** (Go-Celox Trading)     | B2B marketing site for chemical trading company. Next.js 15, SEO + AEO optimized.                                                | `Next.js` `React` `TypeScript`                                        | [GitHub](https://github.com/rushitrabadiya/Go-Celox-trading) · [Live](https://www.mahavirco.com) |
+| **Remindify** — Reminder PWA       | Recurring reminders, offline IndexedDB, async BullMQ push notifications.                                                         | `React` `Node.js` `MongoDB` `Redis` `BullMQ` `Docker`                 | —                                                                                                |
+| **Minimal Gemini Chat**            | SSE-streamed AI chat. Dynamic Flash/Pro model switching, multilingual support.                                                   | `React` `Node.js` `TS` `Prisma` `PostgreSQL`                          | —                                                                                                |
+| **Satyanarayan POS**               | Multi-store retail POS. Inventory, RBAC staff, order processing, receipt gen.                                                    | `Node.js` `TS` `MongoDB` `Mongoose` `Socket.io` `JWT`                 | —                                                                                                |
+| **GMS** — Get My Sport             | Real-time sports venue booking. Prevents double-bookings for owners + clients.                                                   | `Node.js` `React` `MongoDB` `PostgreSQL`                              | —                                                                                                |
 
 <br/>
 
@@ -228,7 +232,7 @@ email    : rushitrabadiya.work@gmail.com
 
 <br/>
 
-**Senior Software Developer** — Edzyme Tech Pvt Ltd *(Dec 2024 → Present)*
+**Senior Software Developer** — Edzyme Tech Pvt Ltd _(Dec 2024 → Present)_
 
 > Owned end-to-end backend architecture and system design for **Kipi**, an enterprise SaaS/ERP platform.
 > Led a team of **6 engineers**, directing technical decisions, code architecture, and PR reviews.
@@ -239,7 +243,7 @@ email    : rushitrabadiya.work@gmail.com
 
 ---
 
-**Backend Developer** — Stackdot *(Mar 2024 → Dec 2024)*
+**Backend Developer** — Stackdot _(Mar 2024 → Dec 2024)_
 
 > Built and maintained scalable backend applications using Node.js, Express.js, and MongoDB within a **Turborepo-based monorepo**.
 > Designed secure RESTful APIs with JWT-based authentication, RBAC, and input validation.
@@ -276,6 +280,33 @@ email    : rushitrabadiya.work@gmail.com
 <br/>
 
 ## Contribution Snake
+
+> **Setup required:** Add the GitHub Action below to generate the snake. Once done, it auto-updates every 12 hours.
+
+```yaml
+# Create this file: .github/workflows/snake.yml  (in rushitrabadiya/rushitrabadiya repo)
+name: Generate Snake
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: rushitrabadiya
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+      - uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
 
 <p align="center">
   <picture>

@@ -49,13 +49,13 @@
 <img align="right" alt="Coding GIF" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="360" style="border-radius: 12px;"/>
 
 ```yaml
-Name     : Rushit Rabadiya
-Role     : Backend Developer (Node.js)
-Company  : Edzyme Tech Pvt Ltd  =>  Senior Software Developer
-Location : Ahmedabad, Gujarat, India
-Exp      : 2.5+ Years
-Led      : Team of 6 Engineers
-API SLA  : < 100ms at peak load
+Name: Rushit Rabadiya
+Role: Backend Developer (Node.js)
+Company: Edzyme Tech Pvt Ltd  =>  Senior Software Developer
+Location: Ahmedabad, Gujarat, India
+Exp: 2.5+ Years
+Led: Team of 6 Engineers
+API SLA: < 100ms at peak load
 
 Currently Learning:
   - Advanced LLM Orchestration & RAG Pipelines
@@ -66,8 +66,8 @@ Currently Building:
   - Kipi — Enterprise SaaS/ERP for Education
   - NexusChat — Multi-tenant AI RAG Platform
 
-Open For : Senior Backend / Full-Stack Roles
-Fun Fact : I debug production at midnight
+Open For: Senior Backend / Full-Stack Roles
+Fun Fact: I debug production at midnight
 ```
 
 <br clear="right"/>
@@ -199,6 +199,7 @@ Fun Fact : I debug production at midnight
 Built with hybrid SQL+NoSQL architecture, real-time updates, and automated fee processing.
 
 **Key Highlights:**
+
 - Hybrid PostgreSQL + MongoDB architecture across microservices
 - API latency under 100ms at peak load
 - Real-time updates via Socket.io
@@ -244,6 +245,7 @@ Built with hybrid SQL+NoSQL architecture, real-time updates, and automated fee p
 With multi-provider AI failover (Gemini, Groq, Ollama) and pgvector storage.
 
 **Key Highlights:**
+
 - RAG pipeline with pgvector semantic search
 - Multi-provider LLM failover: Gemini → Groq → Ollama
 - Local model deployment via Ollama
@@ -281,6 +283,7 @@ With multi-provider AI failover (Gemini, Groq, Ollama) and pgvector storage.
 With Stripe subscriptions and secure S3 pre-signed URL asset delivery.
 
 **Key Highlights:**
+
 - Stripe subscription billing and webhook handling
 - Secure S3 pre-signed URL delivery for paid assets
 - Role-based access control for creators and buyers
@@ -319,6 +322,7 @@ With Stripe subscriptions and secure S3 pre-signed URL asset delivery.
 <td width="50%" valign="top">
 
 #### LAMS — Live Auction System
+
 High-concurrency IPL-style auction platform with real-time Socket.io bid broadcasting and Redis-backed concurrency handling to prevent race conditions.
 
 **Stack:** `Next.js` `React` `TypeScript` `Node.js` `PostgreSQL` `Redis` `BullMQ` `Socket.io`
@@ -326,6 +330,7 @@ High-concurrency IPL-style auction platform with real-time Socket.io bid broadca
 ---
 
 #### Smart Society Management
+
 Enterprise-grade backend to digitize residential society operations — billing, guest entries, complaints, and multi-provider file storage with a factory pattern.
 
 **Stack:** `Node.js` `Express.js` `TypeScript` `MongoDB` `Mongoose` `Socket.io` `JWT` `Docker`
@@ -333,6 +338,7 @@ Enterprise-grade backend to digitize residential society operations — billing,
 ---
 
 #### Remindify — Reminder Platform
+
 Full-stack PWA reminder platform with recurring events, offline IndexedDB support, and async push notifications via BullMQ.
 
 **Stack:** `React` `Node.js` `Express.js` `TypeScript` `MongoDB` `Redis` `BullMQ` `Docker`
@@ -340,6 +346,7 @@ Full-stack PWA reminder platform with recurring events, offline IndexedDB suppor
 ---
 
 #### Satyanarayan POS
+
 Multi-store retail POS backend with inventory, RBAC staff roles, order processing, and receipt generation for a desktop app.
 
 **Stack:** `Node.js` `Express.js` `TypeScript` `MongoDB` `Mongoose` `Socket.io` `JWT`
@@ -348,6 +355,7 @@ Multi-store retail POS backend with inventory, RBAC staff roles, order processin
 <td width="50%" valign="top">
 
 #### Mahavir (Go-Celox Trading)
+
 Premium B2B marketing site for a chemical trading company, built with Next.js 15 with focus on SEO and answer-engine optimization.
 
 **Stack:** `Next.js` `React` `TypeScript`
@@ -358,6 +366,7 @@ Premium B2B marketing site for a chemical trading company, built with Next.js 15
 ---
 
 #### Minimal Gemini Chat
+
 Lightning-fast minimalist AI chat app on Google Gemini with SSE streaming, dynamic model switching (Flash / Pro), and multilingual support.
 
 **Stack:** `React` `Node.js` `Express.js` `TypeScript` `Prisma` `PostgreSQL`
@@ -365,6 +374,7 @@ Lightning-fast minimalist AI chat app on Google Gemini with SSE streaming, dynam
 ---
 
 #### GMS — Get My Sport
+
 Real-time sports venue booking platform preventing double-bookings, with partner backend for venue owners and clients on web and mobile.
 
 **Stack:** `Node.js` `React` `MongoDB` `PostgreSQL`
@@ -436,17 +446,17 @@ Real-time sports venue booking platform preventing double-bookings, with partner
 <summary><b>Backend Engineering</b></summary>
 <br/>
 
-| Skill | Proficiency |
-|-------|-------------|
-| Node.js | `████████████████████░░` 90% |
-| Express.js | `████████████████████░░` 90% |
-| TypeScript | `███████████████████░░░` 85% |
-| JavaScript | `████████████████████░░` 90% |
-| REST APIs | `████████████████████░░` 90% |
-| JWT / RBAC | `██████████████████░░░░` 80% |
+| Skill         | Proficiency                  |
+| ------------- | ---------------------------- |
+| Node.js       | `████████████████████░░` 90% |
+| Express.js    | `████████████████████░░` 90% |
+| TypeScript    | `███████████████████░░░` 85% |
+| JavaScript    | `████████████████████░░` 90% |
+| REST APIs     | `████████████████████░░` 90% |
+| JWT / RBAC    | `██████████████████░░░░` 80% |
 | Microservices | `████████████████░░░░░░` 75% |
-| Socket.io | `████████████████░░░░░░` 75% |
-| BullMQ | `████████████████░░░░░░` 75% |
+| Socket.io     | `████████████████░░░░░░` 75% |
+| BullMQ        | `████████████████░░░░░░` 75% |
 
 </details>
 
@@ -454,14 +464,14 @@ Real-time sports venue booking platform preventing double-bookings, with partner
 <summary><b>Databases</b></summary>
 <br/>
 
-| Skill | Proficiency |
-|-------|-------------|
+| Skill      | Proficiency                  |
+| ---------- | ---------------------------- |
 | PostgreSQL | `███████████████████░░░` 85% |
-| MongoDB | `███████████████████░░░` 85% |
-| Redis | `████████████████░░░░░░` 75% |
-| Sequelize | `██████████████████░░░░` 80% |
-| Mongoose | `██████████████████░░░░` 80% |
-| Prisma | `███████████████░░░░░░░` 70% |
+| MongoDB    | `███████████████████░░░` 85% |
+| Redis      | `████████████████░░░░░░` 75% |
+| Sequelize  | `██████████████████░░░░` 80% |
+| Mongoose   | `██████████████████░░░░` 80% |
+| Prisma     | `███████████████░░░░░░░` 70% |
 
 </details>
 
@@ -469,13 +479,13 @@ Real-time sports venue booking platform preventing double-bookings, with partner
 <summary><b>DevOps & Cloud</b></summary>
 <br/>
 
-| Skill | Proficiency |
-|-------|-------------|
-| Docker | `██████████████████░░░░` 80% |
-| AWS (EC2, S3) | `████████████████░░░░░░` 75% |
+| Skill                  | Proficiency                  |
+| ---------------------- | ---------------------------- |
+| Docker                 | `██████████████████░░░░` 80% |
+| AWS (EC2, S3)          | `████████████████░░░░░░` 75% |
 | CI/CD (GitHub Actions) | `████████████████░░░░░░` 75% |
-| Nginx | `██████████████░░░░░░░░` 65% |
-| Turborepo | `██████████████░░░░░░░░` 65% |
+| Nginx                  | `██████████████░░░░░░░░` 65% |
+| Turborepo              | `██████████████░░░░░░░░` 65% |
 
 </details>
 
@@ -483,10 +493,10 @@ Real-time sports venue booking platform preventing double-bookings, with partner
 <summary><b>AI / ML</b></summary>
 <br/>
 
-| Skill | Proficiency |
-|-------|-------------|
-| RAG / Vector DBs | `██████████████░░░░░░░░` 65% |
-| LLM Orchestration | `█████████████░░░░░░░░░` 60% |
+| Skill               | Proficiency                  |
+| ------------------- | ---------------------------- |
+| RAG / Vector DBs    | `██████████████░░░░░░░░` 65% |
+| LLM Orchestration   | `█████████████░░░░░░░░░` 60% |
 | Ollama (Local LLMs) | `████████████░░░░░░░░░░` 55% |
 
 </details>
