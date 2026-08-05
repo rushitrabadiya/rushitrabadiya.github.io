@@ -11,7 +11,9 @@ window.portfolioData = {
     siteDescription:
       "Backend Developer with 2.5+ years of experience building scalable web applications using Node.js, Express.js, and TypeScript.",
     // ⚠️ REPLACE: Add your resume PDF/DOCX URL here once hosted (e.g. after uploading via your admin panel's Resume & Documents section)
-    resumeUrl: ""
+    resumeUrl: "",
+    // ⚠️ REPLACE: Set your custom favicon URL here (or leave the dummy one for now)
+    favicon: "https://github.githubassets.com/favicons/favicon.png"
   },
 
   // ── Profile ─────────────────────────────────────────────────

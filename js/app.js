@@ -79,6 +79,10 @@
     const m = D.meta || {};
     document.title = m.siteTitle || 'Portfolio';
     if (m.siteDescription) $('meta[name="description"]').content = m.siteDescription;
+    if (m.favicon) {
+      const fav = $('#dynamic-favicon');
+      if (fav) fav.href = m.favicon;
+    }
     if (m.resumeUrl) $('#resume-btn').href = m.resumeUrl;
     else $('#resume-btn').style.opacity = '0.4';
     $('#footer-year').textContent = new Date().getFullYear();
