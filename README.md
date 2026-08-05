@@ -2,7 +2,7 @@
 
 Personal portfolio site for **Rushit Rabadiya**, Backend Developer. A single-page, animated, data-driven portfolio built with vanilla HTML/CSS/JS — every section (hero, about, skills, experience, projects, certifications, contact) is rendered at runtime from one data file.
 
-🔗 **Live / Repository:** https://github.com/rushitrabadiya/portfolio
+🔗 **Live / Repository:** https://rushitrabadiya.github.io/
 
 ## Features
 
