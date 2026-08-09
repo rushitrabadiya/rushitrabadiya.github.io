@@ -1552,8 +1552,12 @@ body:not(:hover) .cursor-ring { opacity: 0; }
   .hamburger     { display: flex; padding: 10px; margin: -10px; }
 
   /* Hero — hug content instead of forcing full-screen height, which
-     left a large dead gap below short content on mobile */
-  .hero { min-height: auto; padding: 7.5rem 0 3rem; align-items: flex-start; }
+     left a large dead gap below short content on mobile.
+     Uses #hero (not .hero) so it always wins over the later, more
+     generic `.section { padding: ... }` rule below, which also
+     matches this element (it carries both classes) and was silently
+     clobbering this padding since both selectors tie on specificity. */
+  #hero { min-height: auto; padding: 7.5rem 0 3rem; align-items: flex-start; }
   .hero__floating-icons { display: none; }   /* hide all floating icons */
   .hero__scroll         { display: none; }   /* hide scroll indicator */
   .hero__mouse-glow     { display: none; }   /* mouse-follow glow is meaningless on touch */
