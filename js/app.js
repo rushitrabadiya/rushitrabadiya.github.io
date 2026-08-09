@@ -546,7 +546,8 @@
             subject: subject || `New Portfolio Inquiry from ${name}`,
             from_name: name,
             email,
-            message
+            message,
+            project: (D.contact || {}).project || "Rushit Portfolio"
           })
         });
         const result = await response.json();

@@ -52,7 +52,10 @@ window.portfolioData = {
   contact: {
     // Web3Forms access key — https://web3forms.com/ — powers the
     // contact form submission (#contact-form) without a backend.
-    web3FormsKey: "07368a4d-71da-4148-959e-d0b23e25f6f7"
+    web3FormsKey: "07368a4d-71da-4148-959e-d0b23e25f6f7",
+    // Sent along with every submission so you can tell which site a
+    // message came from if this same Web3Forms key is reused elsewhere.
+    project: "Rushit Portfolio"
   },
 
   // ── Social Links ────────────────────────────────────────────
