@@ -7,11 +7,11 @@ window.portfolioData = {
 
   // ── Meta / SEO ──────────────────────────────────────────────
   meta: {
-    siteTitle: "Rushit Rabadiya — Backend Developer",
+    siteTitle: "Rushit Rabadiya — Software Engineer",
     siteDescription:
       "Backend Developer with 2.5+ years of experience building scalable web applications using Node.js, Express.js, and TypeScript.",
     // ⚠️ REPLACE: Add your resume PDF/DOCX URL here once hosted (e.g. after uploading via your admin panel's Resume & Documents section)
-    resumeUrl: "https://docs.google.com/document/d/1VJqMvRwUL5lBH5PMsmm7PkW-HBdrlnHJ/edit?usp=sharing&ouid=103983007504582390685&rtpof=true&sd=true",
+    resumeUrl: "https://docs.google.com/document/d/1SF4BHa3VlgiTGkPGGHKRkqQwlMxuJqf_/edit?usp=sharing&ouid=103983007504582390685&rtpof=true&sd=true",
     // ⚠️ REPLACE: Set your custom favicon URL here (or leave the dummy one for now)
     favicon: "https://github.githubassets.com/favicons/favicon.png"
   },
@@ -19,10 +19,9 @@ window.portfolioData = {
   // ── Profile ─────────────────────────────────────────────────
   profile: {
     name: "Rushit Rabadiya",
-    title: "Backend Developer",
-    bio: "Backend Developer with 2.5 years of experience building scalable web applications using Node.js, Express.js, and TypeScript. Strong in RESTful API design, hybrid database architecture (PostgreSQL, MongoDB, Redis), and containerized deployment (Docker, AWS EC2/S3, CI/CD). Experienced leading backend architecture and owning end-to-end delivery, with hands-on exposure to applied AI (RAG pipelines, multi-provider LLM orchestration, local model deployment).",
-    // ⚠️ REPLACE: This is a random stock photo placeholder, not you — swap for your real photo
-    avatar: "https://randomuser.me/api/portraits/men/75.jpg",
+    title: "Software Engineer",
+    bio: "Software Engineer with 2.5 years of experience building scalable backend systems using Node.js, Express.js, and TypeScript. Strong in RESTful API design, hybrid database architecture (PostgreSQL, MongoDB, Redis), and containerized deployment (Docker, AWS EC2/S3, CI/CD). Experienced owning backend architecture end-to-end, from system design through production deployment. Currently exploring applied AI as a growing area alongside backend engineering, with hands-on experimentation in RAG pipelines, vector databases, LLM integration, and multi-provider AI orchestration.",
+    avatar: "https://lh3.googleusercontent.com/d/1mi9ElPB3hjRREbDpoUzrzyKT8PDT7IDP=w1000",
     status: "Available for new opportunities",
     phone: "+91 77779 53418",
     address: "Ahmedabad, Gujarat, India",
@@ -35,14 +34,14 @@ window.portfolioData = {
     name: "Rushit Rabadiya",
     // Typing animation cycles through these roles
     roles: [
-      "Backend Developer",
+      "Software Engineer",
       "API Architect",
       "System Designer",
       "DevOps Engineer",
       "AI / RAG Builder"
     ],
     tagline:
-      "Building scalable, resilient backends that power real products — from API design to cloud deployment.",
+      "Software Engineer building scalable SaaS systems — backend architecture, system design, and growing into applied AI.",
     cta: {
       primary: { label: "View Projects", href: "#projects" },
       secondary: { label: "Get In Touch", href: "#contact" }
@@ -58,10 +57,12 @@ window.portfolioData = {
   },
 
   // ── About Stats ─────────────────────────────────────────────
+  // ⚠️ NOTE: this array isn't currently wired up — the stat cards on the
+  // page are hardcoded in index.html's #stats-grid. Kept here in sync so
+  // it stays a source of truth if that gets data-driven later.
   stats: [
     { value: "2.5+", label: "Years Experience" },
     { value: "10+", label: "Projects Built" },
-    { value: "6", label: "Engineers Led" },
     { value: "<100ms", label: "API Latency" }
   ],
 
@@ -99,33 +100,45 @@ window.portfolioData = {
   experience: [
     {
       company: "Edzyme Tech Private Limited",
-      role: "Senior Software Developer",
+      role: "Senior Software Engineer",
       location: "Ahmedabad, India",
-      startDate: "Dec 2024",
+      startDate: "Jan 2026",
       endDate: "Present",
       current: true,
       description: [
-        "Owned end-to-end backend architecture and system design for Kipi, an enterprise SaaS/ERP platform for educational institutes",
-        "Led a team of 6 engineers, directing technical decisions, code architecture, and PR reviews",
-        "Designed a hybrid database architecture (PostgreSQL + MongoDB) across microservices",
-        "Built async processing pipelines using Redis and BullMQ for notifications, PDF generation, and payment reconciliation, maintaining API latency under 100ms at peak load",
-        "Owned deployment processes and production releases across the engineering team"
+        "Promoted to own end-to-end backend architecture and system design for Kipi, an enterprise SaaS/ERP platform for educational institutes",
+        "Collaborate closely with the engineering team on technical decisions, code architecture, and PR reviews",
+        "Own deployment processes and production releases, maintaining API latency under 100ms at peak load"
       ],
       tech: ["Node.js", "TypeScript", "PostgreSQL", "MongoDB", "Redis", "BullMQ", "Docker", "AWS"]
     },
     {
+      company: "Edzyme Tech Private Limited",
+      role: "Back End Developer",
+      location: "Ahmedabad, India",
+      startDate: "Dec 2024",
+      endDate: "Jan 2026",
+      current: false,
+      description: [
+        "Built core backend features for Kipi, including fee billing, wallet transactions, and academy management modules",
+        "Designed a hybrid database architecture (PostgreSQL + MongoDB) with asynchronous processing pipelines (Redis, BullMQ) for notifications, PDF generation, and payment reconciliation",
+        "Integrated PhonePe payments and Socket.io real-time features, including live notifications and in-app chat"
+      ],
+      tech: ["Node.js", "TypeScript", "PostgreSQL", "MongoDB", "Redis", "BullMQ"]
+    },
+    {
       company: "Stackdot",
-      role: "Backend Developer",
+      role: "Junior Backend Developer",
       location: "Ahmedabad, India",
       startDate: "Mar 2024",
       endDate: "Dec 2024",
       current: false,
       description: [
-        "Built and maintained scalable backend applications using Node.js, Express.js, and MongoDB within a Turborepo-based monorepo",
-        "Designed secure RESTful APIs with JWT-based authentication, role-based access control, and input validation",
-        "Followed clean architecture principles for production-ready, maintainable code"
+        "Built and maintained scalable backend applications using Node.js and Express.js across multiple projects",
+        "Worked with both PostgreSQL and MongoDB, adapting the data layer to each project's needs",
+        "Designed secure RESTful APIs with JWT-based authentication, role-based access control, and input validation"
       ],
-      tech: ["Node.js", "Express.js", "MongoDB", "JWT", "Turborepo"]
+      tech: ["Node.js", "Express.js", "PostgreSQL", "MongoDB", "JWT"]
     }
   ],
 
@@ -134,7 +147,7 @@ window.portfolioData = {
     {
       title: "Kipi — Enterprise SaaS/ERP",
       description:
-        "Enterprise-grade SaaS/ERP backend powering sports academies and educational institutes, with hybrid SQL+NoSQL architecture, real-time updates, and automated fee processing.",
+        "Enterprise-grade SaaS/ERP backend powering sports academies and educational institutes, with hybrid SQL+NoSQL architecture, real-time updates, and automated fee processing. Collaborate closely with the engineering team through design, review, and deployment.",
       image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
       technologies: ["Node.js", "Express.js", "TypeScript", "PostgreSQL", "MongoDB", "Redis", "BullMQ", "Socket.io", "Docker", "AWS"],
       githubUrl: "",

@@ -79,23 +79,33 @@
 }
 
 /* ── Reset ───────────────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
   font-family: var(--font-body);
   background-color: var(--bg-primary);
   color: #E2E8F0;
   line-height: 1.65;
   overflow-x: hidden;
+  width: 100%;
   cursor: none;
   -webkit-font-smoothing: antialiased;
 }
 img, video { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-button { border: none; background: none; cursor: none; font: inherit; }
+a { color: inherit; text-decoration: none; touch-action: manipulation; }
+button { border: none; background: none; cursor: none; font: inherit; touch-action: manipulation; }
 ul, ol { list-style: none; }
 input, textarea { font: inherit; }
 ::selection { background: var(--cyan-glow); color: var(--cyan); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 /* ── Background Layers ───────────────────────────────────── */
 .bg-canvas {
@@ -442,7 +452,7 @@ body:not(:hover) .cursor-ring { opacity: 0; }
 .mobile-nav-link {
   display: block;
   font-family: var(--font-heading);
-  font-size: var(--text-3xl);
+  font-size: clamp(1.25rem, 5vw, 1.75rem);
   font-weight: 700;
   color: #94A3B8;
   padding: 0.5rem 1rem;
@@ -725,7 +735,7 @@ body:not(:hover) .cursor-ring { opacity: 0; }
 }
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-bottom: 2rem;
 }
@@ -1510,14 +1520,44 @@ body:not(:hover) .cursor-ring { opacity: 0; }
   /* Prevent horizontal scroll globally */
   html, body { overflow-x: hidden; max-width: 100vw; }
 
+  /* Safe-area padding for notched / gesture-bar phones */
+  .navbar__container { padding-left: max(var(--container-px), env(safe-area-inset-left)); padding-right: max(var(--container-px), env(safe-area-inset-right)); }
+  .footer { padding-bottom: max(2rem, env(safe-area-inset-bottom)); }
+
+  /* Reduce blur cost — heavy backdrop-filter is a common cause of
+     stutter/jank on mid-range mobile GPUs; fall back to solid panels */
+  .navbar.scrolled,
+  .mobile-menu {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: var(--bg-primary);
+  }
+  .glass-card,
+  .btn--glass,
+  .skill-card,
+  .float-icon {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  /* Decorative-only layers: not worth the paint cost on small screens */
+  .bg-noise { display: none; }
+  .bg-grid  { opacity: 0.5; }
+
+  /* Prevent the mobile menu's backdrop from scrolling the page behind it */
+  .mobile-menu { overscroll-behavior: contain; }
+
   /* Navbar */
   .navbar__links { display: none; }
-  .hamburger     { display: flex; }
+  .hamburger     { display: flex; padding: 10px; margin: -10px; }
 
-  /* Hero */
-  .hero { padding: 5rem 0 3rem; align-items: flex-start; }
+  /* Hero — hug content instead of forcing full-screen height, which
+     left a large dead gap below short content on mobile */
+  .hero { min-height: auto; padding: 7.5rem 0 3rem; align-items: flex-start; }
   .hero__floating-icons { display: none; }   /* hide all floating icons */
   .hero__scroll         { display: none; }   /* hide scroll indicator */
+  .hero__mouse-glow     { display: none; }   /* mouse-follow glow is meaningless on touch */
+  .hero__badge          { margin-top: 0.5rem; }  /* clear the fixed navbar so the badge never crowds it */
   .hero__name           { font-size: clamp(2.4rem, 10vw, 3.5rem); letter-spacing: -0.03em; }
   .hero__greeting       { font-size: var(--text-base); }
   .hero__role           { font-size: clamp(0.95rem, 3.5vw, 1.2rem); }
