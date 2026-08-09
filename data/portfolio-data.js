@@ -48,6 +48,13 @@ window.portfolioData = {
     }
   },
 
+  // ── Contact Form ────────────────────────────────────────────
+  contact: {
+    // Web3Forms access key — https://web3forms.com/ — powers the
+    // contact form submission (#contact-form) without a backend.
+    web3FormsKey: "07368a4d-71da-4148-959e-d0b23e25f6f7"
+  },
+
   // ── Social Links ────────────────────────────────────────────
   socialLinks: {
     github: "https://github.com/rushitrabadiya",

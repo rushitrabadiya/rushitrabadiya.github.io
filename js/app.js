@@ -505,26 +505,68 @@
   function initContactForm() {
     const form = $('#contact-form');
     const feedback = $('#form-feedback');
+    const submitBtn = $('#form-submit');
+    const btnText = submitBtn ? submitBtn.querySelector('.btn__text') : null;
     if (!form) return;
-    form.addEventListener('submit', e => {
+
+    form.addEventListener('submit', async e => {
       e.preventDefault();
       const name    = $('#cf-name').value.trim();
       const email   = $('#cf-email').value.trim();
+      const subject = $('#cf-subject').value.trim();
       const message = $('#cf-message').value.trim();
+
       if (!name || !email || !message) {
         feedback.className = 'form-note error';
         feedback.textContent = 'Please fill in all required fields.';
         return;
       }
-      /* Opens mailto as fallback (no backend needed) */
-      const p = D.profile || {};
-      const subject = encodeURIComponent($('#cf-subject').value.trim() || 'Portfolio Contact');
-      const body    = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-      window.open(`mailto:${p.email}?subject=${subject}&body=${body}`);
+
+      const accessKey = (D.contact || {}).web3FormsKey;
+      if (!accessKey) {
+        feedback.className = 'form-note error';
+        feedback.textContent = 'Contact form is not configured yet.';
+        return;
+      }
+
+      if (submitBtn) submitBtn.disabled = true;
+      if (btnText) btnText.textContent = 'Sending…';
       feedback.className = 'form-note';
-      feedback.textContent = '✓ Opening your mail client…';
-      form.reset();
-      setTimeout(() => { feedback.textContent = ''; }, 4000);
+      feedback.textContent = '';
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify({
+            access_key: accessKey,
+            subject: subject || `New Portfolio Inquiry from ${name}`,
+            from_name: name,
+            email,
+            message
+          })
+        });
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          feedback.className = 'form-note';
+          feedback.textContent = '✓ Message sent — I\'ll get back to you soon!';
+          form.reset();
+        } else {
+          feedback.className = 'form-note error';
+          feedback.textContent = result.message || 'Something went wrong. Please try again.';
+        }
+      } catch (err) {
+        feedback.className = 'form-note error';
+        feedback.textContent = 'Network error — please try again later.';
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+        if (btnText) btnText.textContent = 'Send Message';
+        setTimeout(() => { feedback.textContent = ''; }, 6000);
+      }
     });
   }
 
