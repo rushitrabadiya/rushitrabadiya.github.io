@@ -225,32 +225,44 @@
 
   /* ─── EXPERIENCE ──────────────────────────────────────────── */
   function renderExperience() {
-    const exps = D.experience || [];
+    const companies = D.experience || [];
     const tl = $('#experience-timeline');
     tl.innerHTML = '';
-    exps.forEach(exp => {
+    companies.forEach(company => {
+      const positions = company.positions || [];
+      const hasCurrent = positions.some(p => p.current);
+      const isMulti = positions.length > 1;
       const item = el('div', 'timeline-item reveal-up');
       item.innerHTML = `
-        <div class="timeline-dot${exp.current ? ' current' : ''}"></div>
+        <div class="timeline-dot${hasCurrent ? ' current' : ''}"></div>
         <div class="glass-card timeline-card">
           <div class="timeline-card__header">
             <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:.5rem">
               <div>
-                <div class="timeline-card__role">${exp.role}</div>
-                <div class="timeline-card__company">${exp.company}</div>
+                <div class="timeline-card__company timeline-card__company--main">${company.company}</div>
+                ${isMulti ? `<div class="timeline-card__role-count">${positions.length} roles</div>` : ''}
               </div>
-              ${exp.current ? '<span class="current-badge"><span class="badge-dot pulse" style="background:var(--emerald)"></span>Current</span>' : ''}
+              ${hasCurrent ? '<span class="current-badge"><span class="badge-dot pulse" style="background:var(--emerald)"></span>Current</span>' : ''}
             </div>
             <div class="timeline-card__meta">
-              <span class="timeline-card__period">${svgIcon.calendar} ${exp.startDate} — ${exp.endDate}</span>
-              <span class="timeline-card__location">${svgIcon.mapPin} ${exp.location}</span>
+              <span class="timeline-card__location">${svgIcon.mapPin} ${company.location}</span>
             </div>
           </div>
-          <ul class="timeline-card__desc">
-            ${(exp.description || []).map(d => `<li>${d}</li>`).join('')}
-          </ul>
-          <div class="timeline-tech-row">
-            ${(exp.tech || []).map(t => `<span class="timeline-tech">${t}</span>`).join('')}
+          <div class="exp-positions${isMulti ? ' exp-positions--multi' : ''}">
+            ${positions.map(pos => `
+              <div class="exp-position">
+                ${isMulti ? '<div class="exp-position__dot"></div>' : ''}
+                <div class="exp-position__header">
+                  <div class="timeline-card__role">${pos.role}</div>
+                  <span class="timeline-card__period">${svgIcon.calendar} ${pos.startDate} — ${pos.endDate}</span>
+                </div>
+                <ul class="timeline-card__desc">
+                  ${(pos.description || []).map(d => `<li>${d}</li>`).join('')}
+                </ul>
+                <div class="timeline-tech-row">
+                  ${(pos.tech || []).map(t => `<span class="timeline-tech">${t}</span>`).join('')}
+                </div>
+              </div>`).join('')}
           </div>
         </div>`;
       tl.appendChild(item);

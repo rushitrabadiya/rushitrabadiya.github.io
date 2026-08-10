@@ -98,57 +98,66 @@ window.portfolioData = {
     { name: "AWS (EC2, S3)",         category: "DevOps",   level: 75 },
     { name: "CI/CD (GitHub Actions)",category: "DevOps",   level: 75 },
     { name: "Nginx",                 category: "DevOps",   level: 65 },
-    { name: "Turborepo",             category: "DevOps",   level: 65 },
+    { name: "Turborepo",             category: "DevOps",   level: 50 },
     { name: "React",                 category: "Frontend", level: 65 },
     { name: "Next.js",               category: "Frontend", level: 65 },
-    { name: "RAG / Vector DBs",      category: "AI / ML",  level: 65 },
-    { name: "LLM Orchestration",     category: "AI / ML",  level: 60 },
-    { name: "Ollama (Local LLMs)",   category: "AI / ML",  level: 55 }
+    { name: "RAG / Vector DBs",      category: "AI / ML",  level: 50 },
+    { name: "LLM Orchestration",     category: "AI / ML",  level: 50 },
+    { name: "Ollama (Local LLMs)",   category: "AI / ML",  level: 50 }
   ],
 
   // ── Experience ──────────────────────────────────────────────
+  // Grouped LinkedIn-style: one entry per company, with multiple
+  // `positions` for people who held more than one role/promotion
+  // at the same company (e.g. Edzyme Tech below).
   experience: [
     {
       company: "Edzyme Tech Private Limited",
-      role: "Senior Software Engineer",
       location: "Ahmedabad, India",
-      startDate: "Jan 2026",
-      endDate: "Present",
-      current: true,
-      description: [
-        "Promoted to own end-to-end backend architecture and system design for Kipi, an enterprise SaaS/ERP platform for educational institutes",
-        "Collaborate closely with the engineering team on technical decisions, code architecture, and PR reviews",
-        "Own deployment processes and production releases, maintaining API latency under 100ms at peak load"
-      ],
-      tech: ["Node.js", "TypeScript", "PostgreSQL", "MongoDB", "Redis", "BullMQ", "Docker", "AWS"]
-    },
-    {
-      company: "Edzyme Tech Private Limited",
-      role: "Back End Developer",
-      location: "Ahmedabad, India",
-      startDate: "Dec 2024",
-      endDate: "Jan 2026",
-      current: false,
-      description: [
-        "Built core backend features for Kipi, including fee billing, wallet transactions, and academy management modules",
-        "Designed a hybrid database architecture (PostgreSQL + MongoDB) with asynchronous processing pipelines (Redis, BullMQ) for notifications, PDF generation, and payment reconciliation",
-        "Integrated PhonePe payments and Socket.io real-time features, including live notifications and in-app chat"
-      ],
-      tech: ["Node.js", "TypeScript", "PostgreSQL", "MongoDB", "Redis", "BullMQ"]
+      positions: [
+        {
+          role: "Senior Software Engineer",
+          startDate: "Jan 2026",
+          endDate: "Present",
+          current: true,
+          description: [
+            "Promoted to own end-to-end backend architecture and system design for Kipi, an enterprise SaaS/ERP platform for educational institutes",
+            "Collaborate closely with the engineering team on technical decisions, code architecture, and PR reviews",
+            "Own deployment processes and production releases, maintaining API latency under 100ms at peak load"
+          ],
+          tech: ["Node.js", "TypeScript", "PostgreSQL", "MongoDB", "Redis", "BullMQ", "Docker", "AWS"]
+        },
+        {
+          role: "Back End Developer",
+          startDate: "Dec 2024",
+          endDate: "Jan 2026",
+          current: false,
+          description: [
+            "Built core backend features for Kipi, including fee billing, wallet transactions, and academy management modules",
+            "Designed a hybrid database architecture (PostgreSQL + MongoDB) with asynchronous processing pipelines (Redis, BullMQ) for notifications, PDF generation, and payment reconciliation",
+            "Integrated PhonePe payments and Socket.io real-time features, including live notifications and in-app chat"
+          ],
+          tech: ["Node.js", "TypeScript", "PostgreSQL", "MongoDB", "Redis", "BullMQ"]
+        }
+      ]
     },
     {
       company: "Stackdot",
-      role: "Junior Backend Developer",
       location: "Ahmedabad, India",
-      startDate: "Mar 2024",
-      endDate: "Dec 2024",
-      current: false,
-      description: [
-        "Built and maintained scalable backend applications using Node.js and Express.js across multiple projects",
-        "Worked with both PostgreSQL and MongoDB, adapting the data layer to each project's needs",
-        "Designed secure RESTful APIs with JWT-based authentication, role-based access control, and input validation"
-      ],
-      tech: ["Node.js", "Express.js", "PostgreSQL", "MongoDB", "JWT"]
+      positions: [
+        {
+          role: "Junior Backend Developer",
+          startDate: "Mar 2024",
+          endDate: "Dec 2024",
+          current: false,
+          description: [
+            "Built and maintained scalable backend applications using Node.js and Express.js across multiple projects",
+            "Worked with both PostgreSQL and MongoDB, adapting the data layer to each project's needs",
+            "Designed secure RESTful APIs with JWT-based authentication, role-based access control, and input validation"
+          ],
+          tech: ["Node.js", "Express.js", "PostgreSQL", "MongoDB", "JWT"]
+        }
+      ]
     }
   ],
 

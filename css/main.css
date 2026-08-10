@@ -937,6 +937,42 @@ body:not(:hover) .cursor-ring { opacity: 0; }
   padding: 0.2em 0.7em;
   font-weight: 500;
 }
+.timeline-card__company--main { font-size: var(--text-xl); }
+.timeline-card__role-count {
+  font-size: var(--text-xs);
+  color: #64748B;
+  font-family: var(--font-mono);
+  margin-top: 0.15rem;
+}
+
+/* Multiple positions at the same company (LinkedIn-style grouping) */
+.exp-positions { display: flex; flex-direction: column; }
+.exp-positions--multi {
+  margin-top: 1.25rem;
+  padding-left: 1.25rem;
+  border-left: 2px solid rgba(148, 163, 184, 0.15);
+}
+.exp-positions--multi .exp-position { position: relative; }
+.exp-position + .exp-position { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(148, 163, 184, 0.1); }
+.exp-position__dot {
+  position: absolute;
+  left: -1.5rem;
+  top: 0.4rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 8px var(--cyan-glow);
+}
+.exp-position__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.exp-position .timeline-card__period { font-size: var(--text-sm); }
 .timeline-card__desc {
   list-style: none;
   display: flex;
@@ -1594,12 +1630,19 @@ body:not(:hover) .cursor-ring { opacity: 0; }
   .timeline-card     { padding: 1.25rem; }
   .timeline-card__role    { font-size: var(--text-lg); }
   .timeline-card__company { font-size: var(--text-sm); }
+  .timeline-card__company--main { font-size: var(--text-base); }
   .timeline-card__meta    { flex-direction: column; gap: 0.3rem; }
   .timeline-card__period,
   .timeline-card__location { font-size: 0.7rem; }
   .timeline-card__desc li  { font-size: 0.8rem; }
   .timeline-tech-row       { gap: 0.3rem; }
   .timeline-tech           { font-size: 0.65rem; }
+
+  /* Grouped positions inside a single company card */
+  .exp-positions--multi { padding-left: 0.85rem; }
+  .exp-position__dot    { left: -1.1rem; }
+  .exp-position + .exp-position { margin-top: 1.25rem; padding-top: 1.25rem; }
+  .exp-position__header { gap: 0.3rem; }
 
   /* Projects */
   .projects__grid    { grid-template-columns: 1fr; }
