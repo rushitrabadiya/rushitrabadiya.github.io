@@ -9,9 +9,8 @@ window.portfolioData = {
   meta: {
     siteTitle: "Rushit Rabadiya — Software Engineer",
     siteDescription:
-      "Software Engineer with 2.5+ years of experience building scalable backend systems using Node.js, Express.js, and TypeScript — now growing into applied AI (RAG, LLM orchestration).",
-    // ⚠️ REPLACE: Add your resume PDF/DOCX URL here once hosted (e.g. after uploading via your admin panel's Resume & Documents section)
-    resumeUrl: "https://docs.google.com/document/d/1SF4BHa3VlgiTGkPGGHKRkqQwlMxuJqf_/edit?usp=sharing&ouid=103983007504582390685&rtpof=true&sd=true",
+      "Software Engineer with 3 years exp. (incl. 6-mo. internship) — backend systems in Node.js & TypeScript, growing into applied AI (RAG, LLM).",
+    resumeUrl: "https://docs.google.com/document/d/1HLmEkHhwCA3JLOsUW6-aqnGnuCx-yLvB/edit?usp=sharing&ouid=103983007504582390685&rtpof=true&sd=true",
     favicon: "assets/img/favicon.svg"
   },
 
@@ -19,7 +18,7 @@ window.portfolioData = {
   profile: {
     name: "Rushit Rabadiya",
     title: "Software Engineer",
-    bio: "Software Engineer with 2.5+ years of professional experience — plus 6 months of backend development internship experience — building scalable backend systems using Node.js, Express.js, and TypeScript. Strong in RESTful API design, hybrid database architecture (PostgreSQL, MongoDB, Redis), and containerized deployment (Docker, AWS EC2/S3, CI/CD). Experienced owning backend architecture end-to-end, from system design through production deployment. Currently exploring applied AI as a growing area alongside backend engineering, with hands-on experimentation in RAG pipelines, vector databases, LLM integration, and multi-provider AI orchestration.",
+    bio: "Software Engineer with 3 years of experience (including 6 months of backend development internship experience), building scalable backend systems using Node.js, Express.js, and TypeScript. Strong in RESTful API design, hybrid database architecture (PostgreSQL, MongoDB, Redis), and containerized deployment (Docker, AWS EC2/S3, CI/CD). Experienced owning backend architecture end-to-end, from system design through production deployment. Currently exploring applied AI as a growing area alongside backend engineering, with hands-on experimentation in RAG pipelines, vector databases, LLM integration, and multi-provider AI orchestration.",
     avatar: "https://lh3.googleusercontent.com/d/1mi9ElPB3hjRREbDpoUzrzyKT8PDT7IDP=w1000",
     status: "Available for new opportunities",
     phone: "+91 77779 53418",
@@ -70,7 +69,7 @@ window.portfolioData = {
   // page are hardcoded in index.html's #stats-grid. Kept here in sync so
   // it stays a source of truth if that gets data-driven later.
   stats: [
-    { value: "2.5+", label: "Years Experience" },
+    { value: "3+", label: "Years Experience" },
     { value: "10+", label: "Projects Built" },
     { value: "<100ms", label: "API Latency" }
   ],
