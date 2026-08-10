@@ -19,7 +19,7 @@ window.portfolioData = {
   profile: {
     name: "Rushit Rabadiya",
     title: "Software Engineer",
-    bio: "Software Engineer with 2.5 years of experience building scalable backend systems using Node.js, Express.js, and TypeScript. Strong in RESTful API design, hybrid database architecture (PostgreSQL, MongoDB, Redis), and containerized deployment (Docker, AWS EC2/S3, CI/CD). Experienced owning backend architecture end-to-end, from system design through production deployment. Currently exploring applied AI as a growing area alongside backend engineering, with hands-on experimentation in RAG pipelines, vector databases, LLM integration, and multi-provider AI orchestration.",
+    bio: "Software Engineer with 2.5+ years of professional experience — plus 6 months of backend development internship experience — building scalable backend systems using Node.js, Express.js, and TypeScript. Strong in RESTful API design, hybrid database architecture (PostgreSQL, MongoDB, Redis), and containerized deployment (Docker, AWS EC2/S3, CI/CD). Experienced owning backend architecture end-to-end, from system design through production deployment. Currently exploring applied AI as a growing area alongside backend engineering, with hands-on experimentation in RAG pipelines, vector databases, LLM integration, and multi-provider AI orchestration.",
     avatar: "https://lh3.googleusercontent.com/d/1mi9ElPB3hjRREbDpoUzrzyKT8PDT7IDP=w1000",
     status: "Available for new opportunities",
     phone: "+91 77779 53418",
@@ -155,6 +155,19 @@ window.portfolioData = {
             "Designed secure RESTful APIs with JWT-based authentication, role-based access control, and input validation"
           ],
           tech: ["Node.js", "Express.js", "PostgreSQL", "MongoDB", "JWT"]
+        },
+        {
+          role: "Backend Developer Intern",
+          startDate: "May 2023",
+          endDate: "Oct 2023",
+          current: false,
+          description: [
+            "Designed and integrated RESTful APIs for communication between frontend and backend systems",
+            "Worked with Node.js and Express.js to build backend services, learning asynchronous, middleware, and event-driven architectures",
+            "Worked with PostgreSQL and MongoDB across different projects based on application requirements",
+            "Collaborated with the development team to build scalable and maintainable backend solutions"
+          ],
+          tech: ["Node.js", "Express.js", "JavaScript", "PostgreSQL", "MongoDB", "REST APIs"]
         }
       ]
     }
