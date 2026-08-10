@@ -12,8 +12,7 @@ window.portfolioData = {
       "Software Engineer with 2.5+ years of experience building scalable backend systems using Node.js, Express.js, and TypeScript — now growing into applied AI (RAG, LLM orchestration).",
     // ⚠️ REPLACE: Add your resume PDF/DOCX URL here once hosted (e.g. after uploading via your admin panel's Resume & Documents section)
     resumeUrl: "https://docs.google.com/document/d/1SF4BHa3VlgiTGkPGGHKRkqQwlMxuJqf_/edit?usp=sharing&ouid=103983007504582390685&rtpof=true&sd=true",
-    // ⚠️ REPLACE: Set your custom favicon URL here (or leave the dummy one for now)
-    favicon: "https://github.githubassets.com/favicons/favicon.png"
+    favicon: "assets/img/favicon.svg"
   },
 
   // ── Profile ─────────────────────────────────────────────────
