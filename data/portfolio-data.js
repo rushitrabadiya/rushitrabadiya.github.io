@@ -10,7 +10,7 @@ window.portfolioData = {
     siteTitle: "Rushit Rabadiya — Software Engineer",
     siteDescription:
       "Software Engineer with 3 years exp. (incl. 6-mo. internship) — backend systems in Node.js & TypeScript, growing into applied AI (RAG, LLM).",
-    resumeUrl: "https://docs.google.com/document/d/1HLmEkHhwCA3JLOsUW6-aqnGnuCx-yLvB/edit?usp=sharing&ouid=103983007504582390685&rtpof=true&sd=true",
+    resumeUrl: "assets/resume.pdf",
     favicon: "assets/img/favicon.svg"
   },
 
@@ -19,7 +19,7 @@ window.portfolioData = {
     name: "Rushit Rabadiya",
     title: "Software Engineer",
     bio: "Software Engineer with 3 years of experience (including 6 months of backend development internship experience), building scalable backend systems using Node.js, Express.js, and TypeScript. Strong in RESTful API design, hybrid database architecture (PostgreSQL, MongoDB, Redis), and containerized deployment (Docker, AWS EC2/S3, CI/CD). Experienced owning backend architecture end-to-end, from system design through production deployment. Currently exploring applied AI as a growing area alongside backend engineering, with hands-on experimentation in RAG pipelines, vector databases, LLM integration, and multi-provider AI orchestration.",
-    avatar: "https://lh3.googleusercontent.com/d/1mi9ElPB3hjRREbDpoUzrzyKT8PDT7IDP=w1000",
+    avatar: "assets/img/avatar.jpg",
     status: "Available for new opportunities",
     phone: "+91 77779 53418",
     address: "Ahmedabad, Gujarat, India",
@@ -178,7 +178,7 @@ window.portfolioData = {
       title: "Kipi — Enterprise SaaS/ERP",
       description:
         "Enterprise-grade SaaS/ERP backend powering sports academies and educational institutes, with hybrid SQL+NoSQL architecture, real-time updates, and automated fee processing. Collaborate closely with the engineering team through design, review, and deployment.",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80",
+      image: "assets/img/projects/project-1.jpg",
       technologies: ["Node.js", "Express.js", "TypeScript", "PostgreSQL", "MongoDB", "Redis", "BullMQ", "Socket.io", "Docker", "AWS"],
       githubUrl: "",
       liveUrl: "https://kipiapp.in",
@@ -189,7 +189,7 @@ window.portfolioData = {
       title: "Archrendr — Digital Asset E-Commerce",
       description:
         "Cloud-native e-commerce for buying/selling 3D models & plugins, with Stripe subscriptions and secure S3 pre-signed URL asset delivery.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
+      image: "assets/img/projects/project-2.jpg",
       technologies: ["Node.js", "Express.js", "TypeScript", "PostgreSQL", "Sequelize", "Docker", "AWS", "CI/CD"],
       githubUrl: "",
       liveUrl: "",
@@ -200,7 +200,7 @@ window.portfolioData = {
       title: "NexusChat — AI RAG Platform",
       description:
         "Multi-tenant document chat platform using Retrieval-Augmented Generation, with multi-provider AI failover (Gemini, Groq, Ollama) and pgvector storage.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+      image: "assets/img/projects/project-3.jpg",
       technologies: ["Node.js", "TypeScript", "Prisma", "PostgreSQL", "Redis", "BullMQ", "React", "RAG", "Ollama"],
       githubUrl: "https://github.com/rushitrabadiya/NexusChat",
       liveUrl: "",
@@ -211,7 +211,7 @@ window.portfolioData = {
       title: "Smart Society Management",
       description:
         "Enterprise-grade backend to digitize residential society operations — billing, guest entries, complaints, and multi-provider file storage with a factory pattern.",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+      image: "assets/img/projects/project-4.jpg",
       technologies: ["Node.js", "Express.js", "TypeScript", "MongoDB", "Mongoose", "Socket.io", "JWT", "Docker"],
       githubUrl: "",
       liveUrl: "",
@@ -222,7 +222,7 @@ window.portfolioData = {
       title: "LAMS — Live Auction System",
       description:
         "High-concurrency IPL-style auction platform with real-time Socket.io bid broadcasting and Redis-backed concurrency handling to prevent race conditions.",
-      image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80",
+      image: "assets/img/projects/project-5.jpg",
       technologies: ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "BullMQ", "Socket.io"],
       githubUrl: "",
       liveUrl: "",
@@ -233,7 +233,7 @@ window.portfolioData = {
       title: "Mahavir (Go-Celox Trading)",
       description:
         "Premium B2B marketing site for a chemical trading company, built with Next.js 15 with focus on SEO and answer-engine optimization.",
-      image: "https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=800&q=80",
+      image: "assets/img/projects/project-6.jpg",
       technologies: ["Next.js", "React", "TypeScript"],
       githubUrl: "https://github.com/rushitrabadiya/Go-Celox-trading",
       liveUrl: "https://www.mahavirco.com",
@@ -244,7 +244,7 @@ window.portfolioData = {
       title: "Remindify — Reminder Platform",
       description:
         "Full-stack PWA reminder platform with recurring events, offline IndexedDB support, and async push notifications via BullMQ.",
-      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
+      image: "assets/img/projects/project-7.jpg",
       technologies: ["React", "Node.js", "Express.js", "TypeScript", "MongoDB", "Redis", "BullMQ", "Docker"],
       githubUrl: "",
       liveUrl: "",
@@ -255,7 +255,7 @@ window.portfolioData = {
       title: "Minimal Gemini Chat",
       description:
         "Lightning-fast minimalist AI chat app on Google Gemini with SSE streaming, dynamic model switching (Flash / Pro), and multilingual support.",
-      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80",
+      image: "assets/img/projects/project-8.jpg",
       technologies: ["React", "Node.js", "Express.js", "TypeScript", "Prisma", "PostgreSQL"],
       githubUrl: "",
       liveUrl: "",
@@ -266,7 +266,7 @@ window.portfolioData = {
       title: "Satyanarayan POS",
       description:
         "Multi-store retail POS backend with inventory, RBAC staff roles, order processing, and receipt generation for a desktop app.",
-      image: "https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&q=80",
+      image: "assets/img/projects/project-9.jpg",
       technologies: ["Node.js", "Express.js", "TypeScript", "MongoDB", "Mongoose", "Socket.io", "JWT"],
       githubUrl: "",
       liveUrl: "",
@@ -277,7 +277,7 @@ window.portfolioData = {
       title: "GMS — Get My Sport",
       description:
         "Real-time sports venue booking platform preventing double-bookings, with partner backend for venue owners and clients on web + mobile.",
-      image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800&q=80",
+      image: "assets/img/projects/project-10.jpg",
       technologies: ["Node.js", "React", "MongoDB", "PostgreSQL"],
       githubUrl: "",
       liveUrl: "",
