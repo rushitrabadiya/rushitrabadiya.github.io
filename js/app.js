@@ -172,20 +172,13 @@
       const card = el('div', 'skill-card');
       card.dataset.cat = skill.category;
       const color = categoryColor(skill.category);
+      card.style.setProperty('--card-color', color);
       card.innerHTML = `
-        <div class="skill-card__header">
-          <span class="skill-card__name">${skill.name}</span>
-          <span class="skill-card__level" style="color:${color}">${skill.level}%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-bar__fill" data-width="${skill.level}"
-               style="background:linear-gradient(90deg,${color} 0%,${colorShift(color)} 100%);width:0"></div>
-        </div>`;
+        <span class="skill-card__dot" style="background-color: ${color}; box-shadow: 0 0 8px ${color};"></span>
+        <span class="skill-card__name">${skill.name}</span>
+      `;
       gridEl.appendChild(card);
     });
-
-    /* Animate bars when in view */
-    setTimeout(() => animateSkillBars(), 300);
   }
 
   function filterSkills(cat, tabsEl, gridEl) {
@@ -196,32 +189,13 @@
     $$('.skill-card', gridEl).forEach(card => {
       card.classList.toggle('hidden', cat !== 'All' && card.dataset.cat !== cat);
     });
-    setTimeout(() => animateSkillBars(), 100);
-  }
-
-  function animateSkillBars() {
-    $$('.skill-bar__fill:not([data-animated])').forEach(bar => {
-      const obs = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            bar.style.width = bar.dataset.width + '%';
-            bar.dataset.animated = 'true';
-            obs.disconnect();
-          }
-        });
-      }, { threshold: 0.3 });
-      obs.observe(bar);
-    });
   }
 
   function categoryColor(cat) {
     const map = { Backend: '#06B6D4', Database: '#8B5CF6', DevOps: '#3B82F6', Frontend: '#10B981', 'AI / ML': '#EC4899' };
     return map[cat] || '#06B6D4';
   }
-  function colorShift(hex) {
-    const map = { '#06B6D4': '#3B82F6', '#8B5CF6': '#EC4899', '#3B82F6': '#8B5CF6', '#10B981': '#06B6D4', '#EC4899': '#8B5CF6' };
-    return map[hex] || '#8B5CF6';
-  }
+
 
   /* ─── EXPERIENCE ──────────────────────────────────────────── */
   function renderExperience() {
