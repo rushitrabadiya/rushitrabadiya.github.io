@@ -293,23 +293,39 @@
     projects.forEach(proj => {
       const card = el('div', 'project-card glass-card');
       card.dataset.cat = proj.category;
+
+      const visibleTech = (proj.technologies || []).slice(0, 5);
+      const extraCount  = (proj.technologies || []).length - visibleTech.length;
+      const techHtml    = visibleTech.map(t => `<span class="project-tech-tag">${t}</span>`).join('') +
+                          (extraCount > 0 ? `<span class="project-tech-tag project-tech-tag--more">+${extraCount}</span>` : '');
+
+      const featuredBadge = proj.featured
+        ? `<span class="project-card__featured-badge">★ Featured</span>`
+        : '';
+
       card.innerHTML = `
         <div class="project-card__img-wrap">
           <img class="project-card__img" src="${proj.image}" alt="${proj.title}" loading="lazy"/>
           <div class="project-card__overlay"></div>
-          <span class="project-card__category-badge">${proj.category}</span>
+          <div class="project-card__badges">
+            <span class="project-card__category-badge">${proj.category}</span>
+            ${featuredBadge}
+          </div>
         </div>
         <div class="project-card__body">
           <h3 class="project-card__title">${proj.title}</h3>
           <p class="project-card__desc">${proj.description}</p>
-          <div class="project-card__tech">
-            ${(proj.technologies || []).slice(0, 5).map(t => `<span class="project-tech-tag">${t}</span>`).join('')}
-            ${proj.technologies && proj.technologies.length > 5 ? `<span class="project-tech-tag">+${proj.technologies.length - 5}</span>` : ''}
-          </div>
-          <div class="project-card__links">
-            ${proj.githubUrl ? `<a href="${proj.githubUrl}" class="project-link" target="_blank" rel="noopener">${svgIcon.github} Code</a>` : ''}
-            ${proj.liveUrl   ? `<a href="${proj.liveUrl}"   class="project-link live" target="_blank" rel="noopener">${svgIcon.externalLink} Live</a>` : ''}
-            <button class="view-details-btn" data-proj='${JSON.stringify(proj).replace(/'/g, "&#39;")}'>Details →</button>
+          <div class="project-card__tech">${techHtml}</div>
+          <div class="project-card__actions">
+            <button
+              class="project-card__view-btn"
+              data-proj='${JSON.stringify(proj).replace(/'/g, "&#39;")}'
+              aria-label="View details for ${proj.title}"
+            >View Project <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+            <div class="project-card__ext-links">
+              ${proj.githubUrl ? `<a href="${proj.githubUrl}" class="project-ext-link" target="_blank" rel="noopener" aria-label="View ${proj.title} source on GitHub">${svgIcon.github}</a>` : ''}
+              ${proj.liveUrl   ? `<a href="${proj.liveUrl}"   class="project-ext-link project-ext-link--live" target="_blank" rel="noopener" aria-label="Open live demo of ${proj.title}">${svgIcon.externalLink}</a>` : ''}
+            </div>
           </div>
         </div>`;
       gridEl.appendChild(card);
@@ -317,7 +333,7 @@
 
     /* Detail modal trigger */
     gridEl.addEventListener('click', e => {
-      const btn = e.target.closest('.view-details-btn');
+      const btn = e.target.closest('.project-card__view-btn');
       if (!btn) return;
       try { openProjectModal(JSON.parse(btn.dataset.proj)); } catch {}
     });
@@ -325,38 +341,60 @@
     /* VanillaTilt on cards */
     setTimeout(() => {
       if (window.VanillaTilt) {
-        VanillaTilt.init($$('.project-card'), { max: 8, speed: 400, glare: true, 'max-glare': 0.1 });
+        VanillaTilt.init($$('.project-card'), { max: 6, speed: 400, glare: true, 'max-glare': 0.08 });
       }
     }, 300);
   }
 
-  /* Project Modal */
+  /* ── Project Modal (Premium Gallery) ──────────────────────── */
   function openProjectModal(proj) {
     const modal = $('#project-modal');
     const body  = $('#modal-body');
-    
-    // Build Gallery (Video + Images)
-    let galleryHtml = '';
-    if (proj.video) {
-      galleryHtml += `<video src="${proj.video}" class="modal-media" autoplay loop muted playsinline></video>`;
-    }
+
+    // Gather all media (video first, then images, then fallback)
+    const mediaItems = [];
+    if (proj.video) mediaItems.push({ type: 'video', src: proj.video });
     if (proj.images && proj.images.length > 0) {
-      proj.images.forEach(img => {
-        galleryHtml += `<img class="modal-media" src="${img}" alt="${proj.title} screenshot" loading="lazy"/>`;
-      });
+      proj.images.forEach(src => mediaItems.push({ type: 'image', src }));
     } else if (!proj.video && proj.image) {
-      // Fallback for single image
-      galleryHtml += `<img class="modal-media" src="${proj.image}" alt="${proj.title}" loading="lazy"/>`;
+      mediaItems.push({ type: 'image', src: proj.image });
     }
+
+    const hasThumbs = mediaItems.length > 1;
+
+    const mainMediaHtml = mediaItems.length > 0
+      ? (mediaItems[0].type === 'video'
+          ? `<video id="modal-main-media" class="modal-main-img" src="${mediaItems[0].src}" autoplay loop muted playsinline></video>`
+          : `<img id="modal-main-media" class="modal-main-img" src="${mediaItems[0].src}" alt="${proj.title}" loading="lazy"/>`)
+      : '';
+
+    const thumbsHtml = hasThumbs
+      ? `<div class="modal-thumbs" role="list" aria-label="Project screenshots">
+          ${mediaItems.map((m, i) => m.type === 'video'
+            ? `<button class="modal-thumb${i === 0 ? ' active' : ''}" data-index="${i}" role="listitem" aria-label="Video preview" aria-pressed="${i === 0}">▶</button>`
+            : `<button class="modal-thumb${i === 0 ? ' active' : ''}" data-index="${i}" role="listitem" aria-label="Screenshot ${i + 1}" aria-pressed="${i === 0}"><img src="${m.src}" alt="Screenshot ${i + 1}" loading="lazy"/></button>`
+          ).join('')}
+        </div>`
+      : '';
+
+    const featuredBadge = proj.featured
+      ? `<span class="modal-featured-badge">★ Featured</span>`
+      : '';
 
     body.innerHTML = `
       <div class="modal-layout">
-        <div class="modal-gallery">
-          ${galleryHtml}
+        <div class="modal-gallery-col">
+          <div class="modal-main-wrap">${mainMediaHtml}</div>
+          ${thumbsHtml}
         </div>
         <div class="modal-details">
+          <div class="modal-meta-row">
+            <span class="modal-category-badge">${proj.category}</span>
+            ${featuredBadge}
+          </div>
           <h2 class="modal-title" id="modal-title">${proj.title}</h2>
           <p class="modal-desc">${proj.description}</p>
+          <div class="modal-tech-label">Tech Stack</div>
           <div class="modal-tech">
             ${(proj.technologies || []).map(t => `<span class="project-tech-tag">${t}</span>`).join('')}
           </div>
@@ -367,13 +405,50 @@
         </div>
       </div>
     `;
+
+    // Thumbnail switching
+    if (hasThumbs) {
+      body.querySelectorAll('.modal-thumb').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.dataset.index, 10);
+          const item = mediaItems[idx];
+          const mainWrap = body.querySelector('.modal-main-wrap');
+          mainWrap.innerHTML = item.type === 'video'
+            ? `<video id="modal-main-media" class="modal-main-img" src="${item.src}" autoplay loop muted playsinline></video>`
+            : `<img id="modal-main-media" class="modal-main-img" src="${item.src}" alt="${proj.title}" loading="lazy"/>`;
+          body.querySelectorAll('.modal-thumb').forEach((b, i) => {
+            b.classList.toggle('active', i === idx);
+            b.setAttribute('aria-pressed', i === idx ? 'true' : 'false');
+          });
+        });
+      });
+    }
+
     modal.removeAttribute('hidden');
+
+    // ── Scroll-lock: freeze body without losing scroll position ──
+    const scrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top      = `-${scrollY}px`;
+    document.body.style.width    = '100%';
     document.body.style.overflow = 'hidden';
+    modal._savedScrollY = scrollY;
+
+    modal.querySelector('.modal__close') && modal.querySelector('.modal__close').focus();
   }
 
   function closeProjectModal() {
-    $('#project-modal').setAttribute('hidden', '');
+    const modal = $('#project-modal');
+    modal.setAttribute('hidden', '');
+
+    // ── Restore body scroll position exactly ──────────────────
+    const savedY = modal._savedScrollY || 0;
+    document.body.style.position = '';
+    document.body.style.top      = '';
+    document.body.style.width    = '';
     document.body.style.overflow = '';
+    window.scrollTo({ top: savedY, behavior: 'instant' });
+    modal._savedScrollY = undefined;
   }
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -381,6 +456,8 @@
     $('#modal-overlay').addEventListener('click', closeProjectModal);
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeProjectModal(); });
   });
+
+
 
   /* ─── CERTIFICATIONS ──────────────────────────────────────── */
   function renderCertifications() {
