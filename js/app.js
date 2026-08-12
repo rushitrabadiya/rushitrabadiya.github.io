@@ -334,17 +334,39 @@
   function openProjectModal(proj) {
     const modal = $('#project-modal');
     const body  = $('#modal-body');
+    
+    // Build Gallery (Video + Images)
+    let galleryHtml = '';
+    if (proj.video) {
+      galleryHtml += `<video src="${proj.video}" class="modal-media" autoplay loop muted playsinline></video>`;
+    }
+    if (proj.images && proj.images.length > 0) {
+      proj.images.forEach(img => {
+        galleryHtml += `<img class="modal-media" src="${img}" alt="${proj.title} screenshot" loading="lazy"/>`;
+      });
+    } else if (!proj.video && proj.image) {
+      // Fallback for single image
+      galleryHtml += `<img class="modal-media" src="${proj.image}" alt="${proj.title}" loading="lazy"/>`;
+    }
+
     body.innerHTML = `
-      <img class="modal-img" src="${proj.image}" alt="${proj.title}" loading="lazy"/>
-      <h2 class="modal-title" id="modal-title">${proj.title}</h2>
-      <p class="modal-desc">${proj.description}</p>
-      <div class="modal-tech">
-        ${(proj.technologies || []).map(t => `<span class="project-tech-tag">${t}</span>`).join('')}
+      <div class="modal-layout">
+        <div class="modal-gallery">
+          ${galleryHtml}
+        </div>
+        <div class="modal-details">
+          <h2 class="modal-title" id="modal-title">${proj.title}</h2>
+          <p class="modal-desc">${proj.description}</p>
+          <div class="modal-tech">
+            ${(proj.technologies || []).map(t => `<span class="project-tech-tag">${t}</span>`).join('')}
+          </div>
+          <div class="modal-links">
+            ${proj.githubUrl ? `<a href="${proj.githubUrl}" class="btn btn--glass btn--sm" target="_blank" rel="noopener">${svgIcon.github} View Code</a>` : ''}
+            ${proj.liveUrl   ? `<a href="${proj.liveUrl}"   class="btn btn--primary btn--sm" target="_blank" rel="noopener">${svgIcon.externalLink} Live Demo</a>` : ''}
+          </div>
+        </div>
       </div>
-      <div class="modal-links">
-        ${proj.githubUrl ? `<a href="${proj.githubUrl}" class="btn btn--glass btn--sm" target="_blank" rel="noopener">${svgIcon.github} View Code</a>` : ''}
-        ${proj.liveUrl   ? `<a href="${proj.liveUrl}"   class="btn btn--primary btn--sm" target="_blank" rel="noopener">${svgIcon.externalLink} Live Demo</a>` : ''}
-      </div>`;
+    `;
     modal.removeAttribute('hidden');
     document.body.style.overflow = 'hidden';
   }

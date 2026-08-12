@@ -178,7 +178,11 @@ window.portfolioData = {
       title: "Kipi — Enterprise SaaS/ERP",
       description:
         "Enterprise-grade SaaS/ERP backend powering sports academies and educational institutes, with hybrid SQL+NoSQL architecture, real-time updates, and automated fee processing. Collaborate closely with the engineering team through design, review, and deployment.",
-      image: "assets/img/projects/project-1.jpg",
+      image: "assets/img/projects/ModulesDashBoard.webp",
+      // Optional: Array of multiple images for the gallery
+      images: [],
+      // Optional: Video URL (MP4) to play in the modal
+      video: "",
       technologies: ["Node.js", "Express.js", "TypeScript", "PostgreSQL", "MongoDB", "Redis", "BullMQ", "Socket.io", "Docker", "AWS"],
       githubUrl: "",
       liveUrl: "https://kipiapp.in",
@@ -189,7 +193,11 @@ window.portfolioData = {
       title: "Archrendr — Digital Asset E-Commerce",
       description:
         "Cloud-native e-commerce for buying/selling 3D models & plugins, with Stripe subscriptions and secure S3 pre-signed URL asset delivery.",
-      image: "assets/img/projects/project-2.jpg",
+      image: "assets/img/projects/Archrendr.png",
+      images: [
+        "assets/img/projects/Archrendr.png",
+        "assets/img/projects/Archrendr-2.png"
+      ],
       technologies: ["Node.js", "Express.js", "TypeScript", "PostgreSQL", "Sequelize", "Docker", "AWS", "CI/CD"],
       githubUrl: "",
       liveUrl: "",
@@ -200,7 +208,8 @@ window.portfolioData = {
       title: "NexusChat — AI RAG Platform",
       description:
         "Multi-tenant document chat platform using Retrieval-Augmented Generation, with multi-provider AI failover (Gemini, Groq, Ollama) and pgvector storage.",
-      image: "assets/img/projects/project-3.jpg",
+      image: "assets/img/projects/NexusChat.png",
+      images: ["assets/img/projects/NexusChat.png"],
       technologies: ["Node.js", "TypeScript", "Prisma", "PostgreSQL", "Redis", "BullMQ", "React", "RAG", "Ollama"],
       githubUrl: "https://github.com/rushitrabadiya/NexusChat",
       liveUrl: "",
@@ -233,7 +242,11 @@ window.portfolioData = {
       title: "Mahavir (Go-Celox Trading)",
       description:
         "Premium B2B marketing site for a chemical trading company, built with Next.js 15 with focus on SEO and answer-engine optimization.",
-      image: "assets/img/projects/project-6.jpg",
+      image: "assets/img/projects/mahavir-2.png",
+      images: [
+        "assets/img/projects/mahavir-1.png",
+        "assets/img/projects/mahavir-2.png"
+      ],
       technologies: ["Next.js", "React", "TypeScript"],
       githubUrl: "https://github.com/rushitrabadiya/Go-Celox-trading",
       liveUrl: "https://www.mahavirco.com",
@@ -255,7 +268,8 @@ window.portfolioData = {
       title: "Minimal Gemini Chat",
       description:
         "Lightning-fast minimalist AI chat app on Google Gemini with SSE streaming, dynamic model switching (Flash / Pro), and multilingual support.",
-      image: "assets/img/projects/project-8.jpg",
+      image: "assets/img/projects/Minimal Gemini Chat.png",
+      images: ["assets/img/projects/Minimal Gemini Chat.png"],
       technologies: ["React", "Node.js", "Express.js", "TypeScript", "Prisma", "PostgreSQL"],
       githubUrl: "",
       liveUrl: "",
